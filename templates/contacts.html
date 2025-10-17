@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 
 {% block content%}
-
+<section class="table-wrap" aria-live="polite">
+    <table id="contactsTable">
+      <thead>
+        <tr>
+          <th>Jmého</th>
+          <th>Příjmení</th>
+          <th>Email</th>
+          <th>Telefon</th>
+          <th>Kancelář</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{users [3].jmeno}}</td>
+          <td>{{users [3].prijmeni}}</td>
+          <td><a href="{{users [3].jmeno}}">{{users [3].email}}</a></td>
+          <td><a href="{{users [3].telefon}}">{{users [3].telefon}}</a></td>
+          <td>{{users [3].kancelar}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 {% endblock %}
