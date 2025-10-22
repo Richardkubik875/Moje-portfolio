@@ -13,13 +13,26 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{{users [3].jmeno}}</td>
-          <td>{{users [3].prijmeni}}</td>
-          <td><a href="{{users [3].jmeno}}">{{users [3].email}}</a></td>
-          <td><a href="{{users [3].telefon}}">{{users [3].telefon}}</a></td>
-          <td>{{users [3].kancelar}}</td>
+        {% if user.is_authenticated %}
+          {% if id == () %}
+          <tr class="radek">
+            <td>{{users.jmeno}}</td>
+            <td>{{users.prijmeni}}</td>
+            <td><a href="{{users.jmeno}}">{{users.email}}</a></td>
+            <td><a href="{{users.telefon}}">{{users.telefon}}</a></td>
+            <td>{{users.kancelar}}</td>
         </tr>
+        {% else %}
+        <tr>
+          <td>{{users.jmeno}}</td>
+          <td>{{users.prijmeni}}</td>
+          <td><a href="{{users.jmeno}}">{{users.email}}</a></td>
+          <td><a href="{{users.telefon}}">{{users.telefon}}</a></td>
+          <td>{{users.kancelar}}</td>
+        </tr>
+        {% endif %}
+
+        {% endfor %}
       </tbody>
     </table>
   </section>

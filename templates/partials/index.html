@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% extends "base.html" %}
-    {% block content%}
-    <h2>{{nazev_webu}}</h2>
-    <h2>{{titulek_webu}}</h2>
-    <p>Rád hraju basketball a hry</p>
-    <h2>Umím tyto technologie</h2>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{nazev_webu}}</h2>
+<h2>{{titulek_webu}}</h2>
+<p>Rád hraju basketball a hry</p>
+<h2>Umím tyto technologie</h2>
+
 {% endblock %}
