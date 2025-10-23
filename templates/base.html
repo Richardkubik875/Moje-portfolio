@@ -10,7 +10,8 @@
 <body>
     {%include "/partials/menu.html"%}
     {%include "/partials/baner.html"%}
-    {%include "generator.html"%}
+    {% block content %}
+    {% endblock %}
 
 </body>
 </html>

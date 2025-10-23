@@ -1,24 +1,22 @@
-<!doctype html>
-<html lang="cs">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Banner — Richard Kubik</title>
-  <script type="importmap">
-  {
-    "imports": {}
-  }
-  </script>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/baner_styles.css">
 </head>
 <body>
-  <main class="stage" role="main" aria-label="Banner se jménem">
-    <div class="banner" id="banner" tabindex="0" aria-label="Banner: Richard Kubik">
-      <div class="subtitle" id="subtitle">
-        <h1 class="nazev_webu">{{nazev_webu}}</h1>
-        <h2 class="popis">{{titulek_webu}}</h2>
-      </div>
-    </div>
-  </main>
+    <main class="content">
+        <div class="container">
+          <section class="hero-banner" aria-label="Banner s jménem">
+            <div class="banner-inner">
+              <h1 class="banner-name">{{nazev_webu}}</h1>
+              <h2>{{titulek_webu}}</h2>
+            </div>
+          </section>
+        </div>
+      </main>
 </body>
 </html>

@@ -1,12 +1,16 @@
-from flask import  Flask, render_template
+from flask import  Flask, render_template, request
 from data import users, nazev_webu, popis, technologie, titulek_webu
 from generator import generator
 
 app = Flask (__name__)
 
-@app.route("/")
+@app.route("/", methods={"GET", "POST"})
 def home():
-    return render_template("index.html", nazev_webu = nazev_webu, titulek_webu = titulek_webu)
+    email = None
+
+    if request.method == "GET":
+        email = request.form.get("email")
+    return render_template("index.html", nazev_webu = nazev_webu, titulek_webu = titulek_webu, email = email)
 
 @app.route("/contacts")
 def contacts():

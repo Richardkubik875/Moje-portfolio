@@ -1,10 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="about me">
+    <h2>{{nazev_webu}}</h2>
+    <h2>{{titulek_webu}}</h2>
+    <p>Rád hraju basketball a hry</p>
+    <h2>Umím tyto technologie</h2>
+    <ul>
+        {%for prvek in technologie %}
+            <li>{{prvek}}</li>
+        {%endfor %}
+    </ul>
 
-<h2>{{nazev_webu}}</h2>
-<h2>{{titulek_webu}}</h2>
-<p>Rád hraju basketball a hry</p>
-<h2>Umím tyto technologie</h2>
-
+    <form method="get">
+        Zadejte svou e-mailovou adresu: <input type="text" name="email">
+        <input type="submit" value="Odeslat">
+    </form>
+    <p>
+     Děkujeme za váš email{{email}}
+    </p>
+</div>
 {% endblock %}
