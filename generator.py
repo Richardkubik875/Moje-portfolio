@@ -1,5 +1,4 @@
 import random
 
-def generator(cislo):
-    cislo = range(1, 25)
-    return cislo
+def number():
+    return random.randint(1, 25)

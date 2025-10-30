@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base</title>
-    <link rel="stylesheet" href="menu_styles.css">
-    <link rel="stylesheet" href="baner_styles.css">
+    <link rel="stylesheet" href="static/menu_styles.css">
+    <link rel="stylesheet" href="static/baner_styles.css">
+    <link rel="stylesheet" href="static/index_styles.css">
+    <link rel="stylesheet" href="static/contacts.css">
+
 </head>
 <body>
     {%include "/partials/menu.html"%}
     {%include "/partials/baner.html"%}
-    {% block content %}
-    {% endblock %}
-
+    {% block content %}{% endblock %}
 </body>
 </html>
