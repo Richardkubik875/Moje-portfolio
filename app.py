@@ -7,10 +7,22 @@ app = Flask (__name__)
 @app.route("/", methods={"GET", "POST"})
 def home():
     email = None
+    nickRichard = "Richard"
+    hesloRichard = "heslo"
+    zprávalogin = None
 
     if request.method == "GET":
         email = request.args.get("email")
-    return render_template("index.html", nazev_webu = nazev_webu, titulek_webu = titulek_webu, email = email)
+
+    if request.method == "POST":
+        nick = request.form.get("nick")
+        heslo = request.form.get("heslo")
+
+        if nick == nickRichard and heslo == hesloRichard:
+            zprávalogin = "Přihlášení proběhlo úspěšně"
+        else:
+            zprávalogin = "Špatný login nebo heslo"
+    return render_template("index.html", nazev_webu = nazev_webu, titulek_webu = titulek_webu, email = email, zprava = zprávalogin)
 
 @app.route("/contacts")
 def contacts():
