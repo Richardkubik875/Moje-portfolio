@@ -52,5 +52,19 @@ def eshop():
             nalezeny = next((p for p in produkty if q in p["nazev"].lower()), None)
 
     return render_template("eshop.html", produkt=nalezeny, q=q, titulek_webu="E-shop")
+
+@app.route("/add_product", methods=["POST"])
+def add_product():
+    zprava1 = None
+    if request.method == "POST":
+        try:
+            new_id = int(request.form["id"])
+            nazev = request.form["nazev"]
+            cena = float(request.form["cena"])
+            produkty.append({"id": new_id, "nazev": nazev, "cena": cena})
+            zprava1 = f"✅ Produkt '{nazev}' byl přidán."
+        except Exception as e:
+            zprava1 = f"❌ Chyba: {e}"
+
 if __name__ == "__main__":
     app.run(debug=True)

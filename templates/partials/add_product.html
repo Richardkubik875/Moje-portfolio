@@ -1,0 +1,22 @@
+{% block title %}Přidat produkt{% endblock %}
+
+{% block content %}
+<h2>Přidat nový produkt</h2>
+
+<form method="post">
+    <label>ID:</label>
+    <input type="number" name="id" required><br>
+
+    <label>Název:</label>
+    <input type="text" name="nazev" required><br>
+
+    <label>Cena (Kč):</label>
+    <input type="number" step="0.01" name="cena" required><br>
+
+    <button type="submit">Uložit</button>
+</form>
+
+{% if zprava %}
+<p>{{ zprava1 }}</p>
+{% endif %}
+{% endblock %}
