@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background: #f6f6f6;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+table.produkty {
+    border-collapse: collapse;
+    width: 60%;
+    background: white;
+}
+
+table.produkty th, table.produkty td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+table.produkty th {
+    background: #eee;
+}
+
+input, button {
+    padding: 5px 10px;
+    margin: 5px;
+}

@@ -1,0 +1,28 @@
+{% block title %}E-shop{% endblock %}
+
+{% block content %}
+<h2>Vyhledávání produktu</h2>
+
+<form method="get">
+    <input type="text" name="q" placeholder="Zadejte ID nebo název..." value="{{ q }}">
+    <button type="submit">Hledat</button>
+</form>
+
+{% if produkt %}
+    <h3>Výsledek hledání:</h3>
+    <table class="produkty">
+        <tr>
+            <th>ID</th>
+            <th>Název</th>
+            <th>Cena</th>
+        </tr>
+        <tr>
+            <td>{{ produkt.id }}</td>
+            <td>{{ produkt.nazev }}</td>
+            <td>{{ produkt.cena }} Kč</td>
+        </tr>
+    </table>
+{% elif q %}
+    <p><strong>Žádný produkt nebyl nalezen.</strong></p>
+{% endif %}
+{% endblock %}
