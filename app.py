@@ -62,9 +62,17 @@ def add_product():
             nazev = request.form["nazev"]
             cena = float(request.form["cena"])
             produkty.append({"id": new_id, "nazev": nazev, "cena": cena})
-            zprava1 = f"✅ Produkt '{nazev}' byl přidán."
+            zprava1 = f"Produkt '{nazev}' byl přidán."
         except Exception as e:
-            zprava1 = f"❌ Chyba: {e}"
+            zprava1 = f"Chyba: {e}"
+
+@app.route("/scripty")
+def scripty():
+    return render_template("javascript.html")
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template("404.html"), 404
 
 if __name__ == "__main__":
     app.run(debug=True)
