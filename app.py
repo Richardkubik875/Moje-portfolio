@@ -1,4 +1,4 @@
-from flask import  Flask, render_template, request
+from flask import  Flask, render_template, request, redirect, url_for
 from data import users, nazev_webu, popis, technologie, titulek_webu
 from generator import number
 
